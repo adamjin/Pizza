@@ -2,7 +2,8 @@
 public class Slice {
 
 	private int numCells;
-	private int[] coordinate;
+	private int[] coordinateLeftUp;
+	private int[] coordinateRightDown;
 	private int leftover;
 	private int m;//number of rows of the slice
 	private int n;//number of columns of the slice
@@ -12,11 +13,17 @@ public class Slice {
 	public void setNumCells(int numCells) {
 		this.numCells = numCells;
 	}
-	public int[] getCoordinate() {
-		return coordinate;
+	public int[] getCoordinateLeftUp() {
+		return coordinateLeftUp;
 	}
-	public void setCoordinate(int[] coordinate) {
-		this.coordinate = coordinate;
+	public void setCoordinateLeftUp(int[] coordinateLeftUp) {
+		this.coordinateLeftUp = coordinateLeftUp;
+	}
+	public int[] getCoordinateRightDown() {
+		return coordinateRightDown;
+	}
+	public void setCoordinateRightDown(int[] coordinateRightDown) {
+		this.coordinateRightDown = coordinateRightDown;
 	}
 	public int getLeftover() {
 		return leftover;
