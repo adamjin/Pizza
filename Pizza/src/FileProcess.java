@@ -9,8 +9,14 @@ import java.util.List;
 public class FileProcess {
 	
 	public static void main(String[] args) {
-		FileProcess process = new FileProcess();
-		process.readInputFile("dataset/example.in");
+//		FileProcess process = new FileProcess();
+//		process.readInputFile("dataset/example.in");
+		List<Integer[]> list = CutPizza.findFactors(6);
+		for(Integer[] in: list){
+			for(int i:in)
+				System.out.print(i + " ");
+			System.out.println();
+		}
 	}
 	public Pizza readInputFile(String path){
 		File file = new File(path);
@@ -41,6 +47,12 @@ public class FileProcess {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		System.out.println("Columns "+pizza.getColumn() +" Rows "+pizza.getRow()+" minSLiceLength "+pizza.getMinSliceLength()+ " maxSliceLength "+pizza.getMaxSliceLength() );
+		for(char[] ch: pizza.getCell()){
+			for(char c: ch)
+			System.out.print(""+c);
+			System.out.println();
 		}
 		//pizza.setCell
 		return pizza;
