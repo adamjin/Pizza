@@ -24,7 +24,7 @@ public class CutPizza {
         List<Integer[]> list = new ArrayList<>();
         for (int i = 1; i <= num / 2; i=i+incrementer)
         {
-            if (num % i == 0)
+            if ( num % i == 0)
             {
                 list.add(new Integer[]{i, num/i});
             }
