@@ -6,6 +6,14 @@ public class Pizza {
 	private int minSliceLength; //2L
 	private int maxSliceLength; //H
 	private char[][] cell;
+	
+	public Pizza(int Row, int Column, int minSliceLength, int maxSliceLength, char[][] cell){
+		this.Row = Row;
+		this.Column = Column;
+		this.minSliceLength = 2 * minSliceLength;
+		this.maxSliceLength = maxSliceLength;
+		this.cell = cell;
+	}
 	public int getRow() {
 		return Row;
 	}
